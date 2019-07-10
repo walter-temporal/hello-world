@@ -101,3 +101,12 @@ git push origin master
 #para trabalhar em equipe, devemos criar uma branch para o nosso codigo, 
 #que depois sera analisado pelo revisor antes do merge
 git checkout -b nome-da-branch
+
+
+
+
+
+colocando pelo linux
+
+
+
