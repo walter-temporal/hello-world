@@ -89,7 +89,7 @@ git push origin master
 # verificar o "master" no final do comando acima. se for branch pode ser que mude. vi exemplos com "developer" no lugar do master
 
 
-#entao, a sequencia de comandos para pegar um projeto e adicionar arquivos fica:
+#entao, para projetos pessoais, a sequencia de comandos para pegar um projeto e adicionar arquivos fica:
 
 git clone "url"
 git init
@@ -97,3 +97,7 @@ git add .
 git commit -m "primeiro commit"
 git pull origin master
 git push origin master
+
+#para trabalhar em equipe, devemos criar uma branch para o nosso codigo, 
+#que depois sera analisado pelo revisor antes do merge
+git checkout -b nome-da-branch
