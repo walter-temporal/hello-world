@@ -1,0 +1,99 @@
+#instalacao
+sudo apt-get install git
+
+
+
+
+# no git bash do windows
+$ ssh-keygen -t rsa -b 4096 -C "email_cadastrado_no_github@email.com"
+(enter)
+(enter)
+
+$ eval "$(ssh-agent -s)"
+
+$ ssh-add .ssh/id_rsa
+
+$ clip < .ssh/id_rsa.pub
+#copia pra area de transferencia o que tem no arquivo da chave
+
+agora, no githbub, ir em settings, ssh and GPG keys
+new ssh key
+control+v para colar a chave
+add ssh key
+
+$ ssh -T git@github.com
+#vai aparecer mensagem que nao pode conectar, mas é normal. em seguida digitar "yes"
+
+# quando quiser clonar para windows:
+copiar a url do github. ex: https://github.com/walter-temporal/tutoriais-de-linux.git
+
+#com o botao direito dentro da pasta de destino selecionar: 
+Git Bash Here
+
+# digitar os comandos
+$ git config --global user.name "YOUR NAME"
+
+$ git config --global user.email "YOUR EMAIL ADDRESS"
+
+# Estas configurações ficam alocadas no arquivo ~/.gitconfig, onde o ~ é o seu diretório home. 
+No Windows, ele fica em c:\Usuarios\<username>\.gitconfig.
+
+# O comando para clonar o projeto é: 
+git clone "url"
+
+#digitar para iniciar os servicoes de alteraçoes
+git init
+
+git add <arquivos...> 
+#Este comando adiciona o(s) arquivo(s) em um lugar que chamamos de INDEX, 
+que funciona como uma área do git no qual os arquivos possam ser enviados ao Github. 
+É importante saber que ADD não está adicionando um arquivo novo ao repositório, 
+mas sim dizendo que o arquivo (sendo novo ou não) está sendo preparado para entrar 
+na próxima revisão do repositório.
+
+git commit -m "comentário qualquer" 
+#Este comando realiza o que chamamos de “commit”, 
+que significa pegar todos os arquivos que estão naquele lugar INDEX que o comando add 
+adicionou e criar uma revisão com um número e um comentário, que será vista por todos.
+
+git push 
+#Push (empurrar) é usado para publicar todos os seus commits para o github. 
+Neste momento, será pedido a sua senha.
+
+git status 
+#Exibe o status do seu repositório atual
+
+git show-ref
+
+git ls-remote
+
+Primeiro adiciona os arquivos com o comando:
+
+git add .
+
+Depois faça o commit:
+
+git commit -m "primeiro commit"
+
+
+adicionar arquivos e SEMPRE colocar um commit em seguida, senao da problema!!
+
+# entrar nas pastas dos arquivos igual em linux: cd pasta     ou cd ..
+
+git pull origin master
+
+e
+
+git push origin master
+
+# verificar o "master" no final do comando acima. se for branch pode ser que mude. vi exemplos com "developer" no lugar do master
+
+
+#entao, a sequencia de comandos para pegar um projeto e adicionar arquivos fica:
+
+git clone "url"
+git init
+git add .
+git commit -m "primeiro commit"
+git pull origin master
+git push origin master
