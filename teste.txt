@@ -37,6 +37,7 @@ $ git config --global user.email "YOUR EMAIL ADDRESS"
 
 # Estas configurações ficam alocadas no arquivo ~/.gitconfig, onde o ~ é o seu diretório home. 
 No Windows, ele fica em c:\Usuarios\<username>\.gitconfig.
+no linux     sudo gedit ~/.gitconfig
 
 # O comando para clonar o projeto é: 
 git clone "url"
@@ -103,10 +104,6 @@ git push origin master
 git checkout -b nome-da-branch
 
 
-
-
-
-colocando pelo linux
 
 
 
